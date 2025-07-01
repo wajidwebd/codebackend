@@ -1,0 +1,1546 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <title>Digital marketing Workshop</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description"
+      content="Digital marketing Workshop" />
+   <meta name="author" content="Web D School">
+   <meta name="robots" content="noindex, nofollow">
+
+   <!-- Favicon -->
+   <link rel="shortcut icon" type="image/x-icon" href="./asse/img/favicon.webp">
+   <!-- Stylesheets -->
+   <link rel="stylesheet" href="./asse/css/main.min.css">
+   <link rel="stylesheet" href="./asse/css/footer.css">
+   <link rel="stylesheet" href="./asse/css/dmworkshop.css">
+   
+   <script src="./asse/js/main.js" defer></script>
+
+   <script>
+      function validateForm() {
+          let valid = true;
+  
+          // Name Validation
+          let name = document.getElementById("mce-NAME").value.trim();
+          let nameError = document.getElementById("name-error");
+          if (name === "") {
+              nameError.style.display = "block";
+              valid = false;
+          } else {
+              nameError.style.display = "none";
+          }
+  
+          // Email Validation
+          let email = document.getElementById("mce-EMAIL").value.trim();
+          let emailError = document.getElementById("email-error");
+          let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+          if (!email.match(emailPattern)) {
+              emailError.style.display = "block";
+              valid = false;
+          } else {
+              emailError.style.display = "none";
+          }
+  
+          // Phone Number Validation
+          let phone = document.getElementById("mce-PHONE").value.trim();
+          let phoneError = document.getElementById("phone-error");
+          let phonePattern = /^[0-9]{10,15}$/; // Accepts only numbers, 10-15 digits
+          if (!phone.match(phonePattern)) {
+              phoneError.style.display = "block";
+              valid = false;
+          } else {
+              phoneError.style.display = "none";
+          }
+  
+          // Bootcamp Selection Validation
+          let bootcamp = document.getElementById("mce-DMCAMPMODE").value;
+          let bootcampError = document.getElementById("bootcamp-error");
+          if (bootcamp === "") {
+              bootcampError.style.display = "block";
+              valid = false;
+          } else {
+              bootcampError.style.display = "none";
+          }
+  
+          // Location Validation
+          let location = document.getElementById("mce-LOCATION").value.trim();
+          let locationError = document.getElementById("location-error");
+          if (location === "") {
+              locationError.style.display = "block";
+              valid = false;
+          } else {
+              locationError.style.display = "none";
+          }
+  
+          return valid;
+      }
+  </script>
+  <script>
+   !function(f,b,e,v,n,t,s)
+   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+   n.queue=[];t=b.createElement(e);t.async=!0;
+   t.src=v;s=b.getElementsByTagName(e)[0];
+   s.parentNode.insertBefore(t,s)}(window, document,'script',
+   'https://connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '1766541696915585');
+   fbq('track', 'PageView');
+   </script>
+   <noscript><img height="1" width="1" style="display:none"
+   src="https://www.facebook.com/tr?id=1766541696915585&ev=PageView&noscript=1"
+   /></noscript>
+</head>
+
+<body>
+   <!-- header area satrt -->
+   <header>
+      <div class="header__area">
+        
+         <div class="header__bottom" id="header-sticky">
+            <div class="container">
+               <div class="row align-items-center position-relative justify-content-between">
+                  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
+                     <div class="logo">
+                           <img src="./asse/img/logo/logo-2.webp" width="80px" height="47px" alt="Web D School logo" />
+                     </div>
+                  </div>
+                  <div class="col-xxl-7 col-xl-7 col-lg-9 d-none d-lg-block">
+                     <div class="main-menu">
+                        <nav id="mobile-menu">
+                           <ul class="d-flex justify-content-end">
+                              <li><a href="#about" title="About">About</a></li>
+                              <li><a href="#placements" title="Placements">Placements</a></li>
+                              <li><a href="#faq" title="FAQ">FAQ</a></li>
+
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+             
+               </div>
+            </div>
+            <!-- <div class="bg-header-section">
+                    <div class="containerx">
+
+                    </div>
+                </div> -->
+         </div>
+      </div>
+   </header>
+
+   <!-- header area end -->
+
+   <!-- offcanvas area start -->
+   <div class="offcanvas__area">
+      <div class="modal fade" id="offcanvasmodal" tabindex="-1" aria-labelledby="offcanvasmodal" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="offcanvas__wrapper">
+                  <div class="offcanvas__content">
+                     <div class="offcanvas__top mb-20 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo logo">
+                           <a href="./index.html">
+                              <img src="./asse/img/logo/logo-2.webp" alt="logo" loading="lazy">
+                           </a>
+                        </div>
+                        <div class="offcanvas__close">
+                           <button class="offcanvas__close-btn" data-bs-toggle="modal" data-bs-target="#offcanvasmodal">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-x-lg" viewBox="0 0 16 16">
+                                 <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
+                                 </path>
+                              </svg>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="breadcrumb__content text-center p-relative z-index-1 ">
+                        <div class="breadcrumb__list ">
+                           <span><a href="./index.html">Home</a></span>
+                           <span class="dvdr">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                 <path
+                                    d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                              </svg>
+                           </span>
+                           <span>Online Courses</span>
+                           <span class="dvdr "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                 <path
+                                    d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                              </svg></span>
+                           <span>Digital Marketing</span>
+                        </div>
+                     </div>
+                     <div class="mobile-menu fix"></div>
+                     <div class="offcanvas__contact mt-15 mb-20">
+                        <h4 class="fontsize">Vadapalani Branch</h4>
+                        <ul>
+                           <li class="d-flex align-items-center">
+                              <div class="offcanvas__contact-icon mr-15">
+                                 <i class="locationicon1">
+                                    <svg width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M5.9235 4.66671C5.23068 4.66671 4.66709 5.2303 4.66709 5.92383C4.66709 6.61666 5.23068 7.17953 5.9235 7.17953C6.61632 7.17953 7.17991 6.61666 7.17991 5.92383C7.17991 5.2303 6.61632 4.66671 5.9235 4.66671ZM5.92354 8.25642C4.63698 8.25642 3.59021 7.21037 3.59021 5.9238C3.59021 4.63652 4.63698 3.58975 5.92354 3.58975C7.21011 3.58975 8.25688 4.63652 8.25688 5.9238C8.25688 7.21037 7.21011 8.25642 5.92354 8.25642Z">
+                                       </path>
+                                       <path
+                                          d="M5.92278 1.07695C3.25058 1.07695 1.07663 3.27172 1.07663 5.96834C1.07663 9.39942 5.11437 12.7422 5.92278 12.9202C6.73119 12.7415 10.7689 9.3987 10.7689 5.96834C10.7689 3.27172 8.59499 1.07695 5.92278 1.07695ZM5.92259 14C4.63459 14 -0.000488281 10.0139 -0.000488281 5.96831C-0.000488281 2.67723 2.65664 0 5.92259 0C9.18854 0 11.8457 2.67723 11.8457 5.96831C11.8457 10.0139 7.21059 14 5.92259 14Z">
+                                       </path>
+                                    </svg>
+                                 </i>
+                              </div>
+                              <div class="offcanvas__contact-text">
+                                 <a target="_blank" href="https://g.page/web-d-school-chennai" class="fontdecrease">
+                                    Sector 10, Dr Natesan Salai, Raghavareddy Colony, Above Bank of Baroda,
+                                    Ashok Nagar
+                                    (Near Vadapalani), Chennai- 600 083. </a>
+                              </div>
+                           </li>
+                           <li class="d-flex align-items-center">
+                              <div class="offcanvas__contact-icon mr-15">
+                                 <i><svg viewBox="0 0 122.88 122.31">
+                                       <path
+                                          d="M52.07,68.5A72.28,72.28,0,0,0,61.58,77a83.47,83.47,0,0,0,11.7,7.28l.17-.12c.3-.24.64-.55,1-.9s.6-.65.92-1l1.13-1.47a2.93,2.93,0,0,1,.34-.43c4.31-5.68,9.68-12.51,18.32-8.51a4.1,4.1,0,0,1,.52.26c7,4.14,14.18,8.15,21.24,12.21a3.39,3.39,0,0,1,.5.32l0,0a12,12,0,0,1,4.07,4.72,14.73,14.73,0,0,1,1.36,6.26v0a21.71,21.71,0,0,1-.94,6.1,29.07,29.07,0,0,1-2.6,6.06,23.51,23.51,0,0,1-5.19,6.3,26.81,26.81,0,0,1-6.53,4.11l-.05,0a39.78,39.78,0,0,1-6.66,2.32,64.53,64.53,0,0,1-6.73,1.34,44.49,44.49,0,0,1-10.47.32,49.29,49.29,0,0,1-10.17-2,68.93,68.93,0,0,1-9.89-4,114.94,114.94,0,0,1-10.16-5.67l-.84-.52c-3.07-1.91-6.38-4-9.73-6.47l0,0a129.47,129.47,0,0,1-19-17.67A116.79,116.79,0,0,1,9.39,65.39a77.53,77.53,0,0,1-8-20.6A52.13,52.13,0,0,1,.59,25.22,35.51,35.51,0,0,1,4.21,14.16a26.75,26.75,0,0,1,6.84-8.37A25.64,25.64,0,0,1,20.56,1,32.45,32.45,0,0,1,31.8.15a5.9,5.9,0,0,1,2.82.93,6.07,6.07,0,0,1,2,2.13L50.08,26a11.34,11.34,0,0,1,2.25,5.25,10.56,10.56,0,0,1-.82,5.59v0a14.27,14.27,0,0,1-2.6,3.95,24.06,24.06,0,0,1-3.52,3.12c-.73.63-1.65,1.3-2.61,2l-.09.07a27.86,27.86,0,0,0-3.23,2.59,3.06,3.06,0,0,0-.9,1.2c0,.11.09,0,.19.17l.34.53c1.13,1.77,3.31,5.15,5.8,8.74a91.46,91.46,0,0,0,7.18,9.31Zm5.45,13.9a80.64,80.64,0,0,1-10.38-9.25,94.48,94.48,0,0,1-7.82-10.1c-2.48-3.58-4.76-7.11-5.94-9l-.29-.43a6,6,0,0,1-1.31-4.44,8.81,8.81,0,0,1,2.87-5.47,33.42,33.42,0,0,1,4.05-3.28l0,0c.8-.58,1.56-1.14,2.25-1.73l.21-.16a16.57,16.57,0,0,0,2.67-2.33,7.81,7.81,0,0,0,1.4-2.09,3.81,3.81,0,0,0,.33-2,4.67,4.67,0,0,0-1-2.11,2.51,2.51,0,0,1-.32-.46L30.92,6.86a25.43,25.43,0,0,0-8.61.69,18.67,18.67,0,0,0-7,3.53,20.16,20.16,0,0,0-5.11,6.26,28.8,28.8,0,0,0-2.9,8.94,45.29,45.29,0,0,0,.7,17,71.09,71.09,0,0,0,7.36,18.8A108.83,108.83,0,0,0,29,81.27,122.72,122.72,0,0,0,47,98c3,2.27,6.26,4.28,9.26,6.14l.85.54A108.32,108.32,0,0,0,66.62,110a60.6,60.6,0,0,0,8.91,3.59,42.22,42.22,0,0,0,8.77,1.76,38.12,38.12,0,0,0,8.9-.28,56,56,0,0,0,6-1.18,32.87,32.87,0,0,0,5.53-1.92l.09,0a20.48,20.48,0,0,0,4.92-3.08,16.86,16.86,0,0,0,3.7-4.49,22.54,22.54,0,0,0,2-4.63,15.34,15.34,0,0,0,.66-4.19,7.62,7.62,0,0,0-.69-3.34,5.25,5.25,0,0,0-1.81-2.1c-5.41-3.87-14.91-8.59-21-12.11l-.29-.15.12.06-.12-.06c-3.75-1.67-7.23,2.75-10.06,6.48l-.17.24c-.49.65-1,1.28-1.4,1.82s-1,1.2-1.4,1.6a18.66,18.66,0,0,1-1.71,1.51,9.39,9.39,0,0,1-2.21,1.24,5.59,5.59,0,0,1-2.35.38,6,6,0,0,1-2-.49l-.32-.14A91.42,91.42,0,0,1,57.52,82.4Z">
+                                       </path>
+                                    </svg></i>
+                              </div>
+                              <div class="offcanvas__contact-text">
+                                 <a href="tel:+919791333350" class="fontdecrease">+91 9791 3333 50</a>
+
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="offcanvas__map d-none d-lg-block mb-15">
+                        <iframe
+                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.750755178743!2d80.2041361!3d13.051530800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266c26fa8e309%3A0xb4cc68d4e7143bb1!2sWeb%20D%20School!5e0!3m2!1sen!2sin!4v1666351852073!5m2!1sen!2sin"
+                           loading="lazy"></iframe>
+                     </div>
+                     <div class="offcanvas__contact mt-30 mb-20">
+                        <h4 class="fontsize">Anna Nagar Branch</h4>
+                        <ul>
+                           <li class="d-flex align-items-center">
+                              <div class="offcanvas__contact-icon mr-15">
+                                 <i class="locationicon">
+                                    <svg width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M5.9235 4.66671C5.23068 4.66671 4.66709 5.2303 4.66709 5.92383C4.66709 6.61666 5.23068 7.17953 5.9235 7.17953C6.61632 7.17953 7.17991 6.61666 7.17991 5.92383C7.17991 5.2303 6.61632 4.66671 5.9235 4.66671ZM5.92354 8.25642C4.63698 8.25642 3.59021 7.21037 3.59021 5.9238C3.59021 4.63652 4.63698 3.58975 5.92354 3.58975C7.21011 3.58975 8.25688 4.63652 8.25688 5.9238C8.25688 7.21037 7.21011 8.25642 5.92354 8.25642Z">
+                                       </path>
+                                       <path
+                                          d="M5.92278 1.07695C3.25058 1.07695 1.07663 3.27172 1.07663 5.96834C1.07663 9.39942 5.11437 12.7422 5.92278 12.9202C6.73119 12.7415 10.7689 9.3987 10.7689 5.96834C10.7689 3.27172 8.59499 1.07695 5.92278 1.07695ZM5.92259 14C4.63459 14 -0.000488281 10.0139 -0.000488281 5.96831C-0.000488281 2.67723 2.65664 0 5.92259 0C9.18854 0 11.8457 2.67723 11.8457 5.96831C11.8457 10.0139 7.21059 14 5.92259 14Z">
+                                       </path>
+                                    </svg>
+                                 </i>
+                              </div>
+                              <div class="offcanvas__contact-text">
+                                 <a target="_blank" href="https://goo.gl/maps/wAkAHfes2PaZLhMy5" class="fontdecrease">
+                                    New no. 107 / Old no. AB9, 2nd Avenue, Near Max Showroom, Anna Nagar,
+                                    Chennai-
+                                    600040.</a>
+                              </div>
+                           </li>
+                           <li class="d-flex align-items-center">
+                              <div class="offcanvas__contact-icon mr-15">
+                                 <i><svg viewBox="0 0 122.88 122.31">
+                                       <path
+                                          d="M52.07,68.5A72.28,72.28,0,0,0,61.58,77a83.47,83.47,0,0,0,11.7,7.28l.17-.12c.3-.24.64-.55,1-.9s.6-.65.92-1l1.13-1.47a2.93,2.93,0,0,1,.34-.43c4.31-5.68,9.68-12.51,18.32-8.51a4.1,4.1,0,0,1,.52.26c7,4.14,14.18,8.15,21.24,12.21a3.39,3.39,0,0,1,.5.32l0,0a12,12,0,0,1,4.07,4.72,14.73,14.73,0,0,1,1.36,6.26v0a21.71,21.71,0,0,1-.94,6.1,29.07,29.07,0,0,1-2.6,6.06,23.51,23.51,0,0,1-5.19,6.3,26.81,26.81,0,0,1-6.53,4.11l-.05,0a39.78,39.78,0,0,1-6.66,2.32,64.53,64.53,0,0,1-6.73,1.34,44.49,44.49,0,0,1-10.47.32,49.29,49.29,0,0,1-10.17-2,68.93,68.93,0,0,1-9.89-4,114.94,114.94,0,0,1-10.16-5.67l-.84-.52c-3.07-1.91-6.38-4-9.73-6.47l0,0a129.47,129.47,0,0,1-19-17.67A116.79,116.79,0,0,1,9.39,65.39a77.53,77.53,0,0,1-8-20.6A52.13,52.13,0,0,1,.59,25.22,35.51,35.51,0,0,1,4.21,14.16a26.75,26.75,0,0,1,6.84-8.37A25.64,25.64,0,0,1,20.56,1,32.45,32.45,0,0,1,31.8.15a5.9,5.9,0,0,1,2.82.93,6.07,6.07,0,0,1,2,2.13L50.08,26a11.34,11.34,0,0,1,2.25,5.25,10.56,10.56,0,0,1-.82,5.59v0a14.27,14.27,0,0,1-2.6,3.95,24.06,24.06,0,0,1-3.52,3.12c-.73.63-1.65,1.3-2.61,2l-.09.07a27.86,27.86,0,0,0-3.23,2.59,3.06,3.06,0,0,0-.9,1.2c0,.11.09,0,.19.17l.34.53c1.13,1.77,3.31,5.15,5.8,8.74a91.46,91.46,0,0,0,7.18,9.31Zm5.45,13.9a80.64,80.64,0,0,1-10.38-9.25,94.48,94.48,0,0,1-7.82-10.1c-2.48-3.58-4.76-7.11-5.94-9l-.29-.43a6,6,0,0,1-1.31-4.44,8.81,8.81,0,0,1,2.87-5.47,33.42,33.42,0,0,1,4.05-3.28l0,0c.8-.58,1.56-1.14,2.25-1.73l.21-.16a16.57,16.57,0,0,0,2.67-2.33,7.81,7.81,0,0,0,1.4-2.09,3.81,3.81,0,0,0,.33-2,4.67,4.67,0,0,0-1-2.11,2.51,2.51,0,0,1-.32-.46L30.92,6.86a25.43,25.43,0,0,0-8.61.69,18.67,18.67,0,0,0-7,3.53,20.16,20.16,0,0,0-5.11,6.26,28.8,28.8,0,0,0-2.9,8.94,45.29,45.29,0,0,0,.7,17,71.09,71.09,0,0,0,7.36,18.8A108.83,108.83,0,0,0,29,81.27,122.72,122.72,0,0,0,47,98c3,2.27,6.26,4.28,9.26,6.14l.85.54A108.32,108.32,0,0,0,66.62,110a60.6,60.6,0,0,0,8.91,3.59,42.22,42.22,0,0,0,8.77,1.76,38.12,38.12,0,0,0,8.9-.28,56,56,0,0,0,6-1.18,32.87,32.87,0,0,0,5.53-1.92l.09,0a20.48,20.48,0,0,0,4.92-3.08,16.86,16.86,0,0,0,3.7-4.49,22.54,22.54,0,0,0,2-4.63,15.34,15.34,0,0,0,.66-4.19,7.62,7.62,0,0,0-.69-3.34,5.25,5.25,0,0,0-1.81-2.1c-5.41-3.87-14.91-8.59-21-12.11l-.29-.15.12.06-.12-.06c-3.75-1.67-7.23,2.75-10.06,6.48l-.17.24c-.49.65-1,1.28-1.4,1.82s-1,1.2-1.4,1.6a18.66,18.66,0,0,1-1.71,1.51,9.39,9.39,0,0,1-2.21,1.24,5.59,5.59,0,0,1-2.35.38,6,6,0,0,1-2-.49l-.32-.14A91.42,91.42,0,0,1,57.52,82.4Z">
+                                       </path>
+                                    </svg></i>
+                              </div>
+                              <div class="offcanvas__contact-text">
+                                 <a href="tel:+917305953350" class="fontdecrease">+91 7305 9533 50</a>
+
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+
+                     <div class="offcanvas__map d-none d-lg-block mb-15">
+                        <iframe
+                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31091.394145506703!2d80.18668447161602!3d13.072276110542456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265fc7d1f0257%3A0x4002dab0ccc9de8b!2sWeb%20D%20School%20-%20Annanagar!5e0!3m2!1sen!2sin!4v1672292186986!5m2!1sen!2sin"
+                           loading="lazy"></iframe>
+                     </div>
+                     <div class="offcanvas__contact mt-30 mb-20">
+                        <h4 class="fontsize">Velachery Branch</h4>
+                        <ul>
+
+                           <li class="d-flex align-items-center">
+                              <div class="offcanvas__contact-icon mr-15">
+                                 <i><svg viewBox="0 0 122.88 122.31">
+                                       <path
+                                          d="M52.07,68.5A72.28,72.28,0,0,0,61.58,77a83.47,83.47,0,0,0,11.7,7.28l.17-.12c.3-.24.64-.55,1-.9s.6-.65.92-1l1.13-1.47a2.93,2.93,0,0,1,.34-.43c4.31-5.68,9.68-12.51,18.32-8.51a4.1,4.1,0,0,1,.52.26c7,4.14,14.18,8.15,21.24,12.21a3.39,3.39,0,0,1,.5.32l0,0a12,12,0,0,1,4.07,4.72,14.73,14.73,0,0,1,1.36,6.26v0a21.71,21.71,0,0,1-.94,6.1,29.07,29.07,0,0,1-2.6,6.06,23.51,23.51,0,0,1-5.19,6.3,26.81,26.81,0,0,1-6.53,4.11l-.05,0a39.78,39.78,0,0,1-6.66,2.32,64.53,64.53,0,0,1-6.73,1.34,44.49,44.49,0,0,1-10.47.32,49.29,49.29,0,0,1-10.17-2,68.93,68.93,0,0,1-9.89-4,114.94,114.94,0,0,1-10.16-5.67l-.84-.52c-3.07-1.91-6.38-4-9.73-6.47l0,0a129.47,129.47,0,0,1-19-17.67A116.79,116.79,0,0,1,9.39,65.39a77.53,77.53,0,0,1-8-20.6A52.13,52.13,0,0,1,.59,25.22,35.51,35.51,0,0,1,4.21,14.16a26.75,26.75,0,0,1,6.84-8.37A25.64,25.64,0,0,1,20.56,1,32.45,32.45,0,0,1,31.8.15a5.9,5.9,0,0,1,2.82.93,6.07,6.07,0,0,1,2,2.13L50.08,26a11.34,11.34,0,0,1,2.25,5.25,10.56,10.56,0,0,1-.82,5.59v0a14.27,14.27,0,0,1-2.6,3.95,24.06,24.06,0,0,1-3.52,3.12c-.73.63-1.65,1.3-2.61,2l-.09.07a27.86,27.86,0,0,0-3.23,2.59,3.06,3.06,0,0,0-.9,1.2c0,.11.09,0,.19.17l.34.53c1.13,1.77,3.31,5.15,5.8,8.74a91.46,91.46,0,0,0,7.18,9.31Zm5.45,13.9a80.64,80.64,0,0,1-10.38-9.25,94.48,94.48,0,0,1-7.82-10.1c-2.48-3.58-4.76-7.11-5.94-9l-.29-.43a6,6,0,0,1-1.31-4.44,8.81,8.81,0,0,1,2.87-5.47,33.42,33.42,0,0,1,4.05-3.28l0,0c.8-.58,1.56-1.14,2.25-1.73l.21-.16a16.57,16.57,0,0,0,2.67-2.33,7.81,7.81,0,0,0,1.4-2.09,3.81,3.81,0,0,0,.33-2,4.67,4.67,0,0,0-1-2.11,2.51,2.51,0,0,1-.32-.46L30.92,6.86a25.43,25.43,0,0,0-8.61.69,18.67,18.67,0,0,0-7,3.53,20.16,20.16,0,0,0-5.11,6.26,28.8,28.8,0,0,0-2.9,8.94,45.29,45.29,0,0,0,.7,17,71.09,71.09,0,0,0,7.36,18.8A108.83,108.83,0,0,0,29,81.27,122.72,122.72,0,0,0,47,98c3,2.27,6.26,4.28,9.26,6.14l.85.54A108.32,108.32,0,0,0,66.62,110a60.6,60.6,0,0,0,8.91,3.59,42.22,42.22,0,0,0,8.77,1.76,38.12,38.12,0,0,0,8.9-.28,56,56,0,0,0,6-1.18,32.87,32.87,0,0,0,5.53-1.92l.09,0a20.48,20.48,0,0,0,4.92-3.08,16.86,16.86,0,0,0,3.7-4.49,22.54,22.54,0,0,0,2-4.63,15.34,15.34,0,0,0,.66-4.19,7.62,7.62,0,0,0-.69-3.34,5.25,5.25,0,0,0-1.81-2.1c-5.41-3.87-14.91-8.59-21-12.11l-.29-.15.12.06-.12-.06c-3.75-1.67-7.23,2.75-10.06,6.48l-.17.24c-.49.65-1,1.28-1.4,1.82s-1,1.2-1.4,1.6a18.66,18.66,0,0,1-1.71,1.51,9.39,9.39,0,0,1-2.21,1.24,5.59,5.59,0,0,1-2.35.38,6,6,0,0,1-2-.49l-.32-.14A91.42,91.42,0,0,1,57.52,82.4Z">
+                                       </path>
+                                    </svg></i>
+                              </div>
+                              <div class="offcanvas__contact-text">
+                                 <a href="tel:+917845848350" class="fontdecrease">+91 7845 8483 50</a>
+
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+
+                     <div class="offcanvas__social">
+                        <ul>
+                           <li><a href="https://www.facebook.com/pages/Web-D-School/1596246603984915?fref=ts"
+                                 target="_blank">
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path
+                                       d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                 </svg>
+                              </a></li>
+                           <li><a href="https://twitter.com/webdschool" target="_blank">
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                       d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                    </path>
+                                 </svg>
+                              </a></li>
+                           <li><a href="https://www.instagram.com/web_dschool/" target="_blank">
+                                 <svg width="256px" height="256px" viewBox="0 0 256 256" id="Flat"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M160,128a32,32,0,1,1-32-32A32.03667,32.03667,0,0,1,160,128Zm68-44v88a56.06353,56.06353,0,0,1-56,56H84a56.06353,56.06353,0,0,1-56-56V84A56.06353,56.06353,0,0,1,84,28h88A56.06353,56.06353,0,0,1,228,84Zm-52,44a48,48,0,1,0-48,48A48.05436,48.05436,0,0,0,176,128Zm16-52a12,12,0,1,0-12,12A12,12,0,0,0,192,76Z">
+                                    </path>
+                                 </svg> </a></li>
+                           <li><a href="https://www.youtube.com/channel/UCfshjrc_tHWHeq2gnHcAMuQ" target="_blank">
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path
+                                       d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                 </svg>
+                              </a></li>
+                           <li><a href="https://www.linkedin.com/school/web-d-school/" target="_blank">
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path
+                                       d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                                    </path>
+                                 </svg>
+                              </a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="body-overlay"></div>
+   <!-- offcanvas area end -->
+
+   <main>
+     <section class="banner py-5 " >
+        <img class="sound-icon-1" src="asse/img/graphicdesignworkshop/header-img8.png" />
+        <img class="sound-icon d-md-block d-none" src="asse/img/graphicdesignworkshop/sound-icons2.svg" />
+
+
+        <img src="./asse/img/graphicdesignworkshop/bg_dots.svg" alt="img" class="shape bg-dots rotateme">
+
+        <img src="./asse/img/graphicdesignworkshop/elements9.png" alt="shape" class="line-shape aos-init aos-animate" data-aos="fade-right" data-aos-delay="1600">
+       <div class="container py-4">
+          <div class="row align-items-center">
+              <div class="col-md-6 position-relative">
+                <div class="">
+                    <h1 class="mb-4">Boost Your Freelance Career in Digital Marketing
+                    </h1>
+                    <p class="mb-4"> 
+                        Join Our <span class="text-dark fw-bolder"> FREE Certified Workshop </span>   and get trained by industry experts! In this hands-on workshop, you’ll master the essentials of social media marketing, create stunning visuals with Canva, and learn how to grow your freelance career or business online.
+                        .
+                        </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-wrap position-relative ">	
+                    <img class="sound-icon2 d-md-block d-none" src="asse/img/graphicdesignworkshop/hero5-img2.png" />
+
+
+                    <img src="./asse/img/graphicdesignworkshop/banner_shape01.png" alt="shape" class="tg-motion-effects1 d-xl-block d-none">
+                    <img src="./asse/img/graphicdesignworkshop/banner_shape02.png" alt="shape" class="shape small-shape tg-motion-effects3">
+                    <div class="position-relative p-sm-4 p-3 form-wrap-inner"  id="ee-form-1">
+                        <div id="mc_embed_shell">
+   
+                           <div id="mc_embed_signup">
+                              <form action="https://webdschool.us14.list-manage.com/subscribe/post?u=82e8cb47cd052b995d490e8fd&amp;id=650e927954&amp;f_id=00d89de5f0" 
+                                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" 
+                                    target="_self" novalidate="" onsubmit="return validateForm()">
+                                  
+                                  <div id="mc_embed_signup_scroll">
+                                      <h4 class="mb-4">Digital Marketing Bootcamp Registration</h4>
+                          
+                                      <style>
+                                          .error { color: red; font-size: 12px; display: none; }
+
+                                      </style>
+                          
+                                      <div class="mc-field-group">
+                                          <label for="mce-NAME">Name <span class="asterisk">*</span></label>
+                                          <input type="text" name="NAME" class="required text" id="mce-NAME" required="">
+                                          <span class="error" id="name-error">Name is required.</span>
+                                      </div>
+                          
+                                      <div class="mc-field-group">
+                                          <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                                          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+                                          <span class="error" id="email-error">Enter a valid email address.</span>
+                                      </div>
+                          
+                                      <div class="mc-field-group">
+                                          <label for="mce-PHONE">Phone Number <span class="asterisk">*</span></label>
+                                          <input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" required="">
+                                          <span class="error" id="phone-error">Enter a valid phone number (10-15 digits).</span>
+                                      </div>
+                          
+                                      <div class="mc-field-group">
+                                          <label for="mce-DMCAMPMODE">DM Bootcamp <span class="asterisk">*</span></label>
+                                          <select name="DMCAMPMODE" class="required" id="mce-DMCAMPMODE" required="">
+                                              <option value="">Select an option</option>
+                                              <option value="Online DM Bootcamp">Online DM Bootcamp</option>
+                                          </select>
+                                          <span class="error" id="bootcamp-error">Please select an option.</span>
+                                      </div>
+                          
+                                      <div class="mc-field-group">
+                                          <label for="mce-LOCATION">Where are you from? <span class="asterisk">*</span></label>
+                                          <input type="text" name="LOCATION" class="required text" id="mce-LOCATION" required="">
+                                          <span class="error" id="location-error">Location is required.</span>
+                                      </div>
+                          
+                                      <div class="clear">
+                                          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Register Now">
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                        </div>
+                   
+                </div>	
+              </div>
+
+          </div>
+       </div>
+     </section>
+
+     <section class="counter-section position-relative  py-md-5 py-4">
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-6 col-md-3 mb-3">
+               <div class="counter_content">
+                  <h4><span class="counter">10</span>+</h4>
+                  <p>Years of Excellence</p>
+               </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+               <div class="counter_content">
+                  <h4><span class="counter">5000</span>+</h4>
+                  <p>Students Trained</p>
+               </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+               <div class="counter_content">
+                  <h4><span class="counter">100</span>%</h4>
+                  <p>Placement Record</p>
+               </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+               <div class="counter_content">
+                  <h4><span class="counter">350</span>+</h4>
+                  <p>Students Learning Today</p>
+               </div>
+            </div>
+
+         </div>
+         <!-- <div class="bg-aliment-13 zoom-fade-animation position-absolute">
+            <img src="../asse/img/onlinedigitalmarketing/aliment-03.png" width="44" height="44"
+               alt="Aliment">
+         </div> -->
+
+      </div>
+   </section>
+
+     <section class=" py-md-5 py-4" id="about">
+         <div class="container pt-lg-4 pt-md-3">
+                <h2 class="mb-3 mb-xl-5 text-center">What will you Learn in this Workshop?
+                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+                        <div class="Workshop">
+                            <div class="">
+                                <img class="mb-3" src="./asse/img/graphicdesignworkshop/Intro.png" loading="lazy">
+                            </div>
+                           
+                             <h5>Introduction to Digital Marketing</h5>
+                             <p>Understand the core principles of digital marketing and why it’s crucial for business success today.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+                        <div class="Workshop">
+                            <div class="">
+                                <img class="mb-3" src="./asse/img/graphicdesignworkshop/Frame 2.png" loading="lazy">
+                            </div>
+                             <h5>Social Media Marketing Mastery</h5>
+                             <p>Learn how to craft effective campaigns for platforms like Facebook, Instagram, LinkedIn, and Twitter.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+                        <div class="Workshop">
+                            <div class="">
+                                <img class="mb-3" src="./asse/img/graphicdesignworkshop/Frame 3.png" loading="lazy">
+                            </div>
+                             <h5>Content Creation with Canva</h5>
+                             <p>Get hands-on experience in creating stunning visuals, ads, and graphics for your marketing campaigns using Canva’s user-friendly tools.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+                        <div class="Workshop">
+                            <div class="">
+                                <img class="mb-3" src="./asse/img/graphicdesignworkshop/Frame 4.png" loading="lazy">
+                            </div>
+                             <h5> Social Media Analytics & Strategy</h5>
+                             <p>Discover how to track performance, optimize campaigns, and set measurable goals for social media success.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+                        <div class="Workshop">
+                            <div class="">
+                                <img class="mb-3" src="./asse/img/graphicdesignworkshop/Frame 5.png" loading="lazy">
+                            </div>
+                             <h5>Influencer Marketing & Trends</h5>
+                             <p>Explore how influencer partnerships and emerging trends are reshaping the digital marketing landscape.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+                        <div class="Workshop">
+                            <div class="">
+                                <img class="mb-3" src="./asse/img/graphicdesignworkshop/Frame 6.png" loading="lazy">
+                            </div>
+                             <h5>Building a Personal Brand</h5>
+                             <p> Learn how to leverage social media for personal branding and online presence.
+
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+                        <div class="Workshop">
+                            <div class="">
+                                <img class="mb-3" src="./asse/img/graphicdesignworkshop/Frame 7.png" loading="lazy">
+                            </div>
+                             <h5>Job Opportunities & Career Growth</h5>
+                             <p> Get insights into digital marketing career paths and how you can grow your career or start your business.
+
+                            </p>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="#mc_embed_signup">  <button class="banner-btn-1 w-auto px-sm-4 px-3 me-3 mt-4" type="button">Register Now</button></a>
+
+                </div>
+         </div>
+     </section>
+
+ 
+     <section class="course__portfolio py-md-5 py-4" id="placements">
+        <div class="container">
+           <div class="row">
+              <div class="course__related">
+
+                 <h2 class="text-center mb-lg-4 mb-3">Our Placements</span>
+                 </h2>
+
+                 <div class="row mb-xl-4">
+                    <div class="col-xxl-12">
+                       <div class="blog-wrapper">
+                          <div class="row-wrapper blog-active1">
+                             <div class="custom-col">
+                                <div class="placementcard h-100">
+                                   <div
+                                      class="mt-4 mt-sm-4 d-flex justify-content-center flex-column align-items-center">
+                                      <img class="logo_company" src="./asse/img/placements/image54.png"
+                                         alt="Company logo">
+                                   </div>
+                                   <div class="d-flex justify-content-center align-items-center placement-footer">
+                                      <div class="">
+                                         <div class="user-placement"><img class=""
+                                               src="./asse/img/placements/image49.jpg" alt="Ramya.A"></div>
+                                         <h4>Ramya.A</h4>
+                                         <h6>Digital Marketing Associate</h6>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+
+                             <div class="custom-col">
+                                <div class="placementcard h-100">
+                                   <div
+                                      class="mt-4 mt-sm-4 d-flex justify-content-center flex-column align-items-center">
+                                      <img class="logo_company" src="./asse/img/placements/image33.png"
+                                         alt="Company logo">
+                                   </div>
+                                   <div class="d-flex justify-content-center align-items-center placement-footer">
+                                      <div class="">
+                                         <div class="user-placement"><img class=""
+                                               src="./asse/img/placements/image80.jpg" alt="LOKESH ARVINDH C"></div>
+                                         <h4>LOKESH ARVINDH C</h4>
+                                         <h6>Social media manager</h6>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="custom-col">
+                                <div class="placementcard h-100">
+                                   <div
+                                      class="mt-4 mt-sm-4 d-flex justify-content-center flex-column align-items-center">
+                                      <img class="logo_company" src="./asse/img/placements/image37.png"
+                                         alt="Company logo">
+                                   </div>
+                                   <div class="d-flex justify-content-center align-items-center placement-footer">
+                                      <div class="">
+                                         <div class="user-placement"><img class=""
+                                               src="./asse/img/placements/image78.jpg" alt="Rudolph Anthony Chabra">
+                                         </div>
+                                         <h4>Rudolph Anthony Chabra</h4>
+                                         <h6>Social media optimisation</h6>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+
+                             <!-- <div class="custom-col">
+                                <div class="placementcard h-100">
+                                   <div
+                                      class="mt-4 mt-sm-4 d-flex justify-content-center flex-column align-items-center">
+                                      <img class="logo_company" src="./asse/img/placements/1.webp" alt="Company logo">
+                                   </div>
+                                   <div class="d-flex justify-content-center align-items-center placement-footer">
+                                      <div class="">
+                                         <div class="user-placement"><img class="" src="./testi-img/bhuvantest.png"
+                                               alt="GNANASEKAR S"></div>
+                                         <h4>GNANASEKAR S</h4>
+                                         <h6>Digital marketing executive</h6>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div> -->
+                             <div class="custom-col">
+                                <div class="placementcard h-100">
+                                   <div
+                                      class="mt-4 mt-sm-4 d-flex justify-content-center flex-column align-items-center">
+                                      <img class="logo_company" src="./asse/img/placements/image18.png"
+                                         alt="Company logo">
+                                   </div>
+                                   <div class="d-flex justify-content-center align-items-center placement-footer">
+                                      <div class="">
+                                         <div class="user-placement"><img class=""
+                                               src="./asse/img/placements/image79.jpg" alt="Rudolph Anthony Chabra">
+                                         </div>
+                                         <h4>J Anas</h4>
+                                         <h6>Social Media Lead</h6>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+
+
+                             <div class="custom-col">
+                              <div class="placementcard h-100">
+                                 <div
+                                    class="mt-4 mt-sm-4 d-flex justify-content-center flex-column align-items-center">
+                                    <img class="logo_company" src="./asse/img/placements/image36.png"
+                                       alt="Company logo">
+                                 </div>
+                                 <div class="d-flex justify-content-center align-items-center placement-footer">
+                                    <div class="">
+                                       <div class="user-placement"><img class=""
+                                             src="./asse/img/placements/image107.jpg" alt="Rudolph Anthony Chabra">
+                                       </div>
+                                       <h4>Sweetha S</h4>
+                                       <h6>Digital marketing executive</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+
+                           <div class="custom-col">
+                              <div class="placementcard h-100">
+                                 <div
+                                    class="mt-4 mt-sm-4 d-flex justify-content-center flex-column align-items-center">
+                                    <img class="logo_company" src="./asse/img/placements/image13.png"
+                                       alt="Company logo">
+                                 </div>
+                                 <div class="d-flex justify-content-center align-items-center placement-footer">
+                                    <div class="">
+                                       <div class="user-placement"><img class=""
+                                             src="./asse/img/placements/image32.jpg" alt="Rudolph Anthony Chabra">
+                                       </div>
+                                       <h4>Rudolph Anthony Chabra</h4>
+                                       <h6>Social media manager</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+
+                           <div class="custom-col">
+                              <div class="placementcard h-100">
+                                 <div
+                                    class="mt-4 mt-sm-4 d-flex justify-content-center flex-column align-items-center">
+                                    <img class="logo_company" src="./asse/img/placements/image93.png"
+                                       alt="Company logo">
+                                 </div>
+                                 <div class="d-flex justify-content-center align-items-center placement-footer">
+                                    <div class="">
+                                       <div class="user-placement"><img class=""
+                                             src="./asse/img/placements/image73.jpg" alt="Rudolph Anthony Chabra">
+                                       </div>
+                                       <h4>S.NADHIYARASU</h4>
+                                       <h6>Digital Marketing Executive</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           
+                           <div class="custom-col">
+                              <div class="placementcard h-100">
+                                 <div
+                                    class="mt-4 mt-sm-4 d-flex justify-content-center flex-column align-items-center">
+                                    <img class="logo_company" src="./asse/img/placements/image40.png"
+                                       alt="Company logo">
+                                 </div>
+                                 <div class="d-flex justify-content-center align-items-center placement-footer">
+                                    <div class="">
+                                       <div class="user-placement"><img class=""
+                                             src="./asse/img/placements/image6.jpg" alt="Rudolph Anthony Chabra">
+                                       </div>
+                                       <h4>Vaishnavi Ananthan</h4>
+                                       <h6>Social media marketing executive</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+
+
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+     <section class="testimonals_section">
+        <div class="container py-xl-5 py-4">
+           <h2 class="headingmain text-center mb-4 mb-xl-5 js-scroll fade-in-bottom"> <span>What our students say About Us
+        </span></h2>
+           <div class="row">
+              <div class="col-xl-5 col-sm-6 js-scroll slide-left mb-3 mb-xl-4">
+                 <div class="testimonialcard h-100">
+                    <div class="image-top-tesimonial">
+                       <div class="position-relative">
+                          <!-- /testi-img/testimonialellumalai.png -->
+                          <img class="img-tesimonial" src="./testi-img/testimonialellumalai.png" alt="Elumalai">
+                          <img class="google" src="./asse/img/certificate/google.png" alt="google">
+                       </div>
+                    </div>
+                    <p class="mt-5 mb-1">I'm very happy that I had good experience with webDschool. As I'm looking for
+                       creative and informative sector to work my friend suggested digital marketing in webDschool. I
+                       acquired a lot of skills and it helps me to grow more and learn more. I thank webDschool for
+                       this opportunity.</p>
+                    <div class="mb-3 d-flex align-items-start mt-2 ">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                       <div class="">
+                          <h4>Elumalai</h4>
+                          <h6>Digital Marketing</h6>
+                       </div>
+                       <img class="double-quotes" src="./asse/img/certificate/double-quotes.png" alt="double-quotes">
+                    </div>
+                 </div>
+              </div>
+              <div class="col-xl-7 col-sm-6 js-scroll slide-right mb-3 mb-xl-4">
+                 <div class="testimonialcard h-100">
+                    <div class="image-top-tesimonial">
+                       <div class="position-relative">
+                          <img class="img-tesimonial" src="./testi-img/shariftest.webp"
+                             alt="Digital Marketing course in chennai">
+                          <img class="google" src="./asse/img/certificate/google.png" alt="google">
+                       </div>
+                    </div>
+                    <p class="mt-5 mb-1">I have completed Digital Marketing course in Web D School. It was an wonderful
+                       and informative session, I had a great experience and knowledge. They have professional trainers
+                       and lab facilities to develop our skills. In addition they taught us graphic designing and web
+                       designing too. I thank Web D School for giving me this wonderful opportunity.</p>
+                    <div class="mb-3 d-flex align-items-start mt-2 ">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                       <div class="">
+                          <h4>Sharif</h4>
+                          <h6>Digital Marketing</h6>
+                       </div>
+                       <img class="double-quotes" src="./asse/img/certificate/double-quotes.png" alt="double-quotes">
+                    </div>
+                 </div>
+              </div>
+              <div class="col-xl-7 col-sm-6 js-scroll slide-left">
+                 <div class="testimonialcard h-100">
+                    <div class="image-top-tesimonial">
+                       <div class="position-relative">
+                          <img class="img-tesimonial" src="./testi-img/testimonialshojan.png"
+                             alt="Digital Marketing course in chennai">
+                          <img class="google" src="./asse/img/certificate/google.png" alt="google">
+                       </div>
+                    </div>
+                    <p class="mt-5 mb-1">I joined Web D School for Digital Marketing course. I was provided a very good
+                       training here and the trainers are all approachable and clear our doubts then and there. And the
+                       ambiance of the institute is really good as well.</p>
+                    <div class="mb-3 d-flex align-items-start mt-2 ">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                       <div class="">
+                          <h4>Shojan</h4>
+                          <h6>Digital Marketing</h6>
+                       </div>
+                       <img class="double-quotes" src="./asse/img/certificate/double-quotes.png" alt="double-quotes">
+                    </div>
+                 </div>
+              </div>
+              <div class="col-xl-5 col-sm-6 js-scroll slide-right">
+                 <div class="testimonialcard h-100">
+                    <div class="image-top-tesimonial">
+                       <div class="position-relative">
+                          <img class="img-tesimonial" src="./testi-img/testimg14.png"
+                             alt="Digital Marketing course in chennai">
+                          <img class="google" src="./asse/img/certificate/google.png" alt="google">
+                       </div>
+                    </div>
+                    <p class="mt-5 mb-1">I'm very happy that I had good experience with webDschool. As I'm looking for
+                       creative and informative sector to work my friend suggested digital marketing in webDschool. I
+                       acquired a lot of skills and it helps me to grow more and learn more. I thank webDschool for
+                       this opportunity.</p>
+                    <div class="mb-3 d-flex align-items-start mt-2 ">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                       <img class="star" src="./asse/img/certificate/star.png" alt="star">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                       <div class="">
+                          <h4>Vidhiya Prabhaharan A S</h4>
+                          <h6>Digital Marketing</h6>
+                       </div>
+                       <img class="double-quotes" src="./asse/img/certificate/double-quotes.png" alt="double-quotes">
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="d-flex justify-content-center">
+            <a href="#mc_embed_signup">  <button class="banner-btn-1 w-auto px-sm-4 px-3 me-3 mt-4" type="button">Register Now</button></a>
+
+          </div>
+        </div>
+     </section>
+     
+      <!-- Love from Our Mentees start -->
+      <section class="py-lg-5 py-4 Mentees-testimonial">
+         <div class="container my-xl-3">
+       
+            <h2 class="headingmain text-center mb-4 mb-xl-5 js-scroll fade-in-bottom">Real Stories! Real <span>Impact !
+               </span></h2>
+
+            <div class="row js-scroll fade-in-bottom">
+               <div class="col-lg-3 col-6">
+                  <div class="lovefrommente">
+                     <div class="video_player_wrapper">
+                        <img class="lovefrommenteimg" src="./asse/img/onlinedigitalmarketing/menteetest1.png" alt="img"
+                           width="100%" height="100%" loading="lazy">
+                        <ul>
+                           <li>
+                              <a href="https://youtube.com/shorts/uDRCb0rVsEM" class="play-btn popup-video pulse-btn">
+                                 <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48113 15.5 9.86603L2 17.6603C1.33333 18.0452 0.5 17.564 0.5 16.7942V1.20577C0.5 0.43597 1.33333 -0.0451542 2 0.339746L15.5 8.13397Z"
+                                       fill="#ef5e5e"></path>
+                                 </svg>
+
+                              </a>
+
+                           </li>
+                        </ul>
+
+                     </div>
+                     <div class="lovefrommenteinner">
+
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-6">
+                  <div class="lovefrommente">
+                     <div class="video_player_wrapper">
+                        <img class="lovefrommenteimg" src="./asse/img/onlinedigitalmarketing/menteetest2.png" alt="img"
+                           width="100%" height="100%" loading="lazy">
+                        <ul>
+                           <li>
+                              <a href="https://youtube.com/shorts/ox0utpZbzQY" class="play-btn popup-video pulse-btn">
+                                 <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48113 15.5 9.86603L2 17.6603C1.33333 18.0452 0.5 17.564 0.5 16.7942V1.20577C0.5 0.43597 1.33333 -0.0451542 2 0.339746L15.5 8.13397Z"
+                                       fill="#ef5e5e"></path>
+                                 </svg>
+
+                              </a>
+
+                           </li>
+                        </ul>
+
+                     </div>
+                     <div class="lovefrommenteinner">
+
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-6">
+                  <div class="lovefrommente">
+                     <div class="video_player_wrapper">
+                        <img class="lovefrommenteimg" src="./asse/img/onlinedigitalmarketing/menteetest3.png" alt="img"
+                           width="100%" height="100%" loading="lazy">
+                        <ul>
+                           <li>
+                              <a href="https://youtube.com/shorts/jSJN2n0qQT4" class="play-btn popup-video pulse-btn">
+                                 <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48113 15.5 9.86603L2 17.6603C1.33333 18.0452 0.5 17.564 0.5 16.7942V1.20577C0.5 0.43597 1.33333 -0.0451542 2 0.339746L15.5 8.13397Z"
+                                       fill="#ef5e5e"></path>
+                                 </svg>
+
+                              </a>
+
+                           </li>
+                        </ul>
+
+                     </div>
+                     <div class="lovefrommenteinner">
+
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-6">
+                  <div class="lovefrommente">
+                     <div class="video_player_wrapper">
+                        <img class="lovefrommenteimg" src="./asse/img/onlinedigitalmarketing/menteetest4.png" alt="img"
+                           width="100%" height="100%" loading="lazy">
+                        <ul>
+                           <li>
+                              <a href="https://youtube.com/shorts/tx726do1ia4" class="play-btn popup-video pulse-btn">
+                                 <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48113 15.5 9.86603L2 17.6603C1.33333 18.0452 0.5 17.564 0.5 16.7942V1.20577C0.5 0.43597 1.33333 -0.0451542 2 0.339746L15.5 8.13397Z"
+                                       fill="#ef5e5e"></path>
+                                 </svg>
+
+                              </a>
+
+                           </li>
+                        </ul>
+
+                     </div>
+                     <div class="lovefrommenteinner">
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Love from Our Mentees end -->
+     <section class="faq__area py-md-5 py-4" id="faq">
+        <div class="container">
+           <div class="row">
+            <h2 class="mb-xl-5 mb-3 text-center">Frequently Asked Questions</h2>
+              <div class="">
+                 <div class="faq__item-wrapper mt-0">
+                    <div class="faq__accordion">
+                       <div class="accordion" id="faqaccordion">
+                          <div class="row align-items-center">
+                            <div class="col-xl-6 mb0-xl-0 mb-4 js-scroll slide-left">
+                                <div class="faq__img-wrap tg-svg">
+                                   <div class="faq__round-text">
+                                      <div class="curved-circle">
+                                         <div aria-label="* EDUCATION * SYSTEM * CAN * MAKE * CHANGE *" style="position: relative; height: 12.5381em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.319688em) rotate(-81.6509deg); transform-origin: center 14em;">*</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(-78.9206deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.45875em) rotate(-75.5398deg); transform-origin: center 14em;">E</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(-71.1198deg); transform-origin: center 14em;">D</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(-66.5713deg); transform-origin: center 14em;">U</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(-62.0227deg); transform-origin: center 14em;">C</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.449062em) rotate(-57.648deg); transform-origin: center 14em;">A</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.430625em) rotate(-53.5336deg); transform-origin: center 14em;">T</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(-50.2844deg); transform-origin: center 14em;">I</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.514062em) rotate(-46.6449deg); transform-origin: center 14em;">O</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(-41.9662deg); transform-origin: center 14em;">N</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(-38.4569deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.319688em) rotate(-35.7266deg); transform-origin: center 14em;">*</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(-32.9962deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.45875em) rotate(-29.6155deg); transform-origin: center 14em;">S</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.45875em) rotate(-25.3242deg); transform-origin: center 14em;">Y</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.45875em) rotate(-21.0328deg); transform-origin: center 14em;">S</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.430625em) rotate(-16.873deg); transform-origin: center 14em;">T</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.45875em) rotate(-12.7132deg); transform-origin: center 14em;">E</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.541563em) rotate(-8.03456deg); transform-origin: center 14em;">M</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(-4.26649deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.319688em) rotate(-1.53617deg); transform-origin: center 14em;">*</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(1.19415deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(4.70352deg); transform-origin: center 14em;">C</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(9.2521deg); transform-origin: center 14em;">A</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(13.8007deg); transform-origin: center 14em;">N</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(17.31deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.319688em) rotate(20.0404deg); transform-origin: center 14em;">*</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(22.7707deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.541563em) rotate(26.5388deg); transform-origin: center 14em;">M</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(31.3461deg); transform-origin: center 14em;">A</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(35.8946deg); transform-origin: center 14em;">K</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.45875em) rotate(40.3146deg); transform-origin: center 14em;">E</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(43.6953deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.319688em) rotate(46.4257deg); transform-origin: center 14em;">*</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(49.156deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(52.6653deg); transform-origin: center 14em;">C</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(57.2139deg); transform-origin: center 14em;">H</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(61.7625deg); transform-origin: center 14em;">A</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.48625em) rotate(66.3111deg); transform-origin: center 14em;">N</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.514062em) rotate(70.9898deg); transform-origin: center 14em;">G</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.45875em) rotate(75.5398deg); transform-origin: center 14em;">E</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.264062em) rotate(78.9206deg); transform-origin: center 14em;">&nbsp;</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.319688em) rotate(81.6509deg); transform-origin: center 14em;">*</span>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="faq__img"><img src="./asse/img/graphicdesignworkshop/faq1.png" alt="img" loading="lazy">
+                                      <div class="shape-one"><svg width="243" height="201" viewBox="0 0 243 201" fill="none" xmlns="http://www.w3.org/2000/svg" class="injectable injectable tg-motion-effects4">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.4888 2.33732C51.0788 -4.90402 74.7375 10.3492 95.1583 10.1059C112.054 9.90458 124.917 -1.94773 142.286 1.04108C161.229 4.30087 182.771 11.4675 196.311 27.5126C209.823 43.525 204.073 64.7482 211.768 83.3776C219.978 103.254 244.371 120.756 242.796 140.051C241.244 159.064 219.234 165.093 204.324 174.576C191.463 182.756 177.07 187.574 161.728 191.613C144.966 196.024 128.585 200.247 110.135 199.366C85.6793 198.199 52.9607 207.808 36.8703 185.654C19.1764 161.292 51.8095 136.455 44.5608 109.082C38.4883 86.1502 3.04428 71.7681 0.682568 48.9991C-1.5703 27.2795 15.2076 9.8632 33.4888 2.33732Z" fill="currentcolor"></path>
+                                            <svg width="100%" height="100%" viewBox="0 0 243 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M33.4888 2.33732C51.0788 -4.90402 74.7375 10.3492 95.1583 10.1059C112.054 9.90458 124.917 -1.94773 142.286 1.04108C161.229 4.30087 182.771 11.4675 196.311 27.5126C209.823 43.525 204.073 64.7482 211.768 83.3776C219.978 103.254 244.371 120.756 242.796 140.051C241.244 159.064 219.234 165.093 204.324 174.576C191.463 182.756 177.07 187.574 161.728 191.613C144.966 196.024 128.585 200.247 110.135 199.366C85.6793 198.199 52.9607 207.808 36.8703 185.654C19.1764 161.292 51.8095 136.455 44.5608 109.082C38.4883 86.1502 3.04428 71.7681 0.682568 48.9991C-1.5703 27.2795 15.2076 9.8632 33.4888 2.33732Z" fill="currentcolor" style="stroke-dasharray: 745, 747; stroke-dashoffset: 0;"></path>
+                                            </svg>
+                                         </svg></div>
+                                      <div class="shape-two"><span class="svg-icon" id="vivus-9vv4i3yzx"><svg width="100%" height="100%" viewBox="0 0 54 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                               <path d="M3.76256 36.4136C7.34334 29.8191 15.1459 14.2331 17.71 4.64484" stroke="#031333" stroke-width="3.07158" stroke-linejoin="round" style="stroke-dasharray: 35, 37; stroke-dashoffset: 0;"></path>
+                                               <path d="M18.1469 52.3203C25.5569 51.1365 42.6675 47.8153 51.8301 44" stroke="#031333" stroke-width="3.07158" stroke-linejoin="round" style="stroke-dasharray: 35, 37; stroke-dashoffset: 0;"></path>
+                                               <path d="M12.9399 41.2119C17.218 38.6967 26.7978 32.5534 30.8916 28.1021" stroke="#031333" stroke-width="3.07158" stroke-linejoin="round" style="stroke-dasharray: 23, 25; stroke-dashoffset: 0;"></path>
+                                            </svg></span></div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-xl-6 js-scroll slide-right">
+                                <div class="accordion-item">
+                                   <h2 class="accordion-header" id="faqOne">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                         1)  Do I need prior experience in digital marketing to join this workshop?
+
+                                      </button>
+                                   </h2>
+                                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqaccordion">
+                                      <div class="accordion-body">
+                                         <p>No, this workshop is beginner-friendly! Whether you're new to digital marketing or looking to sharpen your skills, you’ll gain valuable knowledge that can be applied immediately.
+                                        </p>
+
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="accordion-item">
+                                   <h2 class="accordion-header" id="faqTwo">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                         2) Is this workshop free?
+
+                                      </button>
+                                   </h2>
+                                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqaccordion">
+                                      <div class="accordion-body">
+                                         <p>Yes, this is a completely free workshop! We want to empower aspiring marketers with the skills they need to succeed in the digital world.
+                                        </p>
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="accordion-item">
+                                   <h2 class="accordion-header" id="faqThree">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                         3)  Will I receive a certificate after completing the workshop?
+
+
+                                      </button>
+                                   </h2>
+                                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqaccordion">
+                                      <div class="accordion-body">
+                                         <p>Yes! A certificate of participation will be awarded after the workshop. This certificate can be added to your resume and shared with potential employers or clients.
+                                        </p>
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="accordion-item">
+                                   <h2 class="accordion-header" id="faqFour">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                         4) What’s the next step after attending this workshop?
+
+                                      </button>
+                                   </h2>
+                                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqaccordion">
+                                      <div class="accordion-body">
+                                         <p> After the workshop, you’ll be equipped with foundational skills to start your digital marketing journey. You can enroll in our advanced digital marketing courses to further deepen your knowledge.
+                                        </p>
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="accordion-item">
+                                   <h2 class="accordion-header" id="faqFive">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                         5)  How do I register for the workshop and secure my seat?
+
+
+                                      </button>
+                                   </h2>
+                                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#faqaccordion">
+                                      <div class="accordion-body">
+                                         <p>To register, simply click the Register Now button, fill out your details, and secure your spot. Seats are limited, so don’t wait to kickstart your digital marketing career!
+
+                                         </p>
+                                      </div>
+                                   </div>
+                                </div>
+                          
+                                 <a href="#mc_embed_signup">  <button class="banner-btn-1 w-auto px-sm-4 px-3 me-3 mt-4" type="button">Register Now</button></a>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+
+
+     <div class="stikyfooter" style="bottom: 0px;">
+      <div class="container">
+         <div class="d-md-flex justify-content-around align-items-center">
+            <div class="">
+               <p> Learn, Execute &amp; Launch Your Career in Digital Marketing!
+               </p>
+            </div>
+
+            <div class="">
+               <div class="d-flex justify-content-center justify-content-md-end">
+                  <div class="me-3">
+                     <a href="tel:+919791333350" >
+                        <button class="banner-btn-1 px-3" type="button">Call Now</button>
+
+                     </a>
+                  </div>
+        
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   </main>
+
+   <!-- footer area start -->
+   <footer>
+      <div class="footer__area ">
+         <!-- <div class="footer__top pt-60">
+            <div class="container">
+               <div class="row">
+                  <div class=" col-lg-5 col-md-6 col-sm-7">
+                     <div class="footer__widget footer__widget-3 mb-3">
+                        <div class="footer__logo mb-3">
+                           <div class="logo">
+                              <a href="./index.html">
+                                 <img src="./asse/img/certificate/white-logo.png" alt="">
+                              </a>
+                           </div>
+                        </div>
+                        <div class="footer__widget-content">
+                           <div class="footer__widget-info">
+                              <div class="footer__subscribe footer__subscribe-3">
+                                 <h3 class="footer__widget-title footer__widget-title-3">Our institute is
+                                    within 5 km
+                                    radius from these following areas</h3>
+                                 <h3></h3>
+                                 <p class="mb-0">Vadapalani, Virugambakkam, Valasaravakkam, Alwarthirunagar,
+                                    Saligramam,
+                                    Ashok Nagar,
+                                    KK Nagar, Guindy. T Nagar, Choolaimedu, Kodambakkam Nungambakkam,
+                                    Mambalam,
+                                    Arumbakkam, Anna Nagar, Mogappair, Porur,Villivakkam, Perambur,
+                                    Ambattur,
+                                    Thirumangalam, Purasawalkam, Kellys, Kilpauk, Padi, Korattur,
+                                    Ayanavaram, Avadi,
+                                    Jamalia, Kolathur, Shenoy Nagar, Aminjikarai, Madhavaram.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="gidfunction col-lg-2">
+                     <div class="footer__widget footer__widget-3 footer-col-3-2 mb-30">
+                        <h3 class="footer__widget-title footer__widget-title-3 mb-2">Explore</h3>
+                        <div class="line-inner mb-4"></div>
+                        <div class="footer__widget-content">
+                           <ul>
+                              <li><a href="./studentstestimonial.html">Testimonials</a></li>
+                              <li><a href="/gallery.html">Student Works</a></li>
+                              <li><a href="./infrastructure.html">Infrastructure</a></li>
+                           </ul>
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="gidfunction col-lg-2">
+                     <div class="footer__widget footer__widget-3 footer-col-3-2 mb-4">
+                        <h3 class="footer__widget-title footer__widget-title-3 mb-2">Links</h3>
+                        <div class="line-inner mb-4"></div>
+                        <div class="footer__widget-content">
+                           <ul>
+                              <li><a href="./blog/">Blog</a></li>
+                              <li><a href="./placement.html">Placements</a></li>
+                              <li>
+                                 <a href="https://careers.webdschool.com/">Job Portal</a>
+                              </li>
+                              <li>
+                                 <a href="./contact.html">Contact</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-7">
+                     <div class="footer__widget footer__widget-3 mb-3">
+                        <h3 class="footer__widget-title footer__widget-title-3">How It Works ? / How to Join our Course?
+                        </h3>
+                        <div class="footer__contact">
+                           <dl>
+                              <dt>Choose any Course - </dt>
+                              <dd> Explore the courses and their unique benefits. Select one that suits you.
+                              </dd>
+                              <dt>Enroll after enquiry - </dt>
+                              <dd>Contact us to get more details & enroll in a batch.</dd>
+                              <dt>Start learning -</dt>
+                              <dd>All set. Enjoy your new journey!</dd>
+                           </dl>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer__bottom">
+            <div class="container">
+               <div class="footer__bottom-inner">
+                  <div class="row">
+                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 paddingaddd">
+                        <h3 class="footer__widget-title footer__widget-title-3 mb-2">Ashok Nagar Branch</h3>
+                        <div class="line-inner mb-4"></div>
+                        <div class="footer__social footer__social-3 " style="display: flex;">
+                           <svg class="mr-10 widthimage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                              <path
+                                 d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
+                           </svg>
+                           <a href="https://g.page/web-d-school-chennai" target="_blank">Web D School, Sector
+                              10, Dr
+                              Natesan Salai, Raghavareddy Colony, Above Bank of Baroda, Ashok Nagar (Near
+                              Vadapalani),
+                              Chennai- 600 083. </a>
+                        </div>
+                        <div class="footer__bottom-link">
+                           <ul>
+                              <li> <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                       d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" />
+                                 </svg><a href="tel:+919791333350">+91 9791 3333 50</a>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li><svg class="mr-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                       d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+                                 </svg><a href="mailto:info@webdschool.com">info@webdschool.com</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 paddingaddd givinggaptop">
+                        <h3 class="footer__widget-title footer__widget-title-3 mb-2">Anna Nagar Branch</h3>
+                        <div class="line-inner mb-4"></div>
+                        <div class="footer__social footer__social-3 " style="display: flex;">
+                           <svg class="mr-10 widthimage1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                              <path
+                                 d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
+                           </svg>
+                           <a href="#">Web D School, New no. 107 / Old no. AB9, 2nd Avenue, Near Max Showroom,
+                              Anna
+                              Nagar, Chennai- 600 040.</a>
+                        </div>
+                        <div class="footer__bottom-link">
+                           <ul>
+                              <li> <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                       d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" />
+                                 </svg><a href="tel:+917305953350">+91 7305 9533 50</a>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li><svg class="mr-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                       d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+                                 </svg><a href="mailto:info@webdschool.com">info@webdschool.com</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 paddingaddd givinggaptop">
+                        <h3 class="footer__widget-title footer__widget-title-3 mb-2">Velachery Branch</h3>
+                        <div class="line-inner mb-4"></div>
+                        <div class="footer__social footer__social-3 " style="display: flex;">
+                           <svg class="mr-10 widthimage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                              <path
+                                 d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
+                           </svg>
+                           <a href="#">Web D School, No.1, 2nd floor, Tansi Nagar, 2nd street, Velachery,
+                              Chennai -
+                              600042.</a>
+                        </div>
+                        <div class="footer__bottom-link">
+                           <ul>
+                              <li> <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                       d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" />
+                                 </svg><a href="tel:+917845848350">+91 7845 8483 50</a>
+                              </li>
+                           </ul>
+                           <ul>
+                              <li><svg class="mr-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                       d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+                                 </svg><a href="mailto:info@webdschool.com">info@webdschool.com</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <h3 class="footer__widget-title footer__widget-title-3 text-center fw-bolder mt-3 mt-lg-4 mb-0">
+                        Contact for Online Courses - Cell : <a href="tel:+917845873350">+91 7845 8733 50</a>
+                     </h3>
+                  </div>
+               </div>
+            </div>
+         </div> -->
+         <div class="footer__bottom bg-black">
+            <div class="container">
+               <div class="py-2">
+                  <div class="row align-items-center justify-content-center">
+                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="footer__bottom-link">
+                           <ul class="text-center">
+                              <li><a>© WebDSchool 2023</a></li>
+                              <!-- <li><a href="/privacy-policy.html">Privacy</a></li>
+                              <li><a href="/terms-and-conditions.html">Terms</a></li>
+                              <li><a href="/sitemap.html">Sitemap</a></li> -->
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                        <div class="footer__social footer__social-3 text-md-end">
+                           <ul>
+                              <li><a href="https://www.facebook.com/pages/Web-D-School/1596246603984915?fref=ts"
+                                    target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                       <path
+                                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                       </path>
+                                    </svg>
+                                 </a></li>
+                              <li><a href="https://twitter.com/webdschool" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                       <path
+                                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                       </path>
+                                    </svg>
+                                 </a></li>
+                              <li><a href="https://www.instagram.com/web_dschool/" target="_blank">
+                                    <svg width="256px" height="256px" viewBox="0 0 256 256" id="Flat"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M160,128a32,32,0,1,1-32-32A32.03667,32.03667,0,0,1,160,128Zm68-44v88a56.06353,56.06353,0,0,1-56,56H84a56.06353,56.06353,0,0,1-56-56V84A56.06353,56.06353,0,0,1,84,28h88A56.06353,56.06353,0,0,1,228,84Zm-52,44a48,48,0,1,0-48,48A48.05436,48.05436,0,0,0,176,128Zm16-52a12,12,0,1,0-12,12A12,12,0,0,0,192,76Z">
+                                       </path>
+                                    </svg> </a></li>
+                              <li><a href="https://www.youtube.com/channel/UCfshjrc_tHWHeq2gnHcAMuQ" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                       <path
+                                          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                       </path>
+                                    </svg>
+                                 </a></li>
+                              <li><a href="https://www.linkedin.com/school/web-d-school/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                       <path
+                                          d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                                       </path>
+                                    </svg>
+                                 </a></li>
+                           </ul>
+                        </div>
+                     </div> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- footer area end -->
+
+   <script>
+      function playVideo() {
+         var container = document.getElementById("videoContainer");
+         container.innerHTML = `
+            <div class="video-container">
+                <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/ETkGGI-wypQ?si=hnLsuLmPjkq5ot_o?autoplay=1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>`;
+      }
+   </script>
+
+
+   <link rel="preload" href="./asse/css/backtotop.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript>
+      <link rel="stylesheet" href="./asse/css/backtotop.css">
+   </noscript>
+   <link rel="preload" href="./asse/css/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript>
+      <link rel="stylesheet" href="./asse/css/magnific-popup.css">
+   </noscript>
+   <link rel="preload" href="./asse/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript>
+      <link rel="stylesheet" href="./asse/css/slick.css">
+   </noscript>
+   <link rel="preload" href="./asse/css/spacing.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript>
+      <link rel="stylesheet" href="./asse/css/spacing.css">
+   </noscript>
+   <script src="./asse/js/vendor/jquery.js" defer></script>
+   <script src="./asse/js/vendor/waypoints.js" defer></script>
+   <script src="./asse/js/bootstrap-bundle.js" defer></script>
+   <script src="./asse/js/meanmenu.js" defer></script>
+   <script src="./asse/js/magnific-popup.js" defer></script>
+   <script src="./asse/js/backtotop.js" defer></script>
+   <script src="./asse/js/counterup.js" defer></script>
+   <script src="./asse/js/slick.min.js" defer></script>
+   <script src="./asse/js/main.js" defer></script>
+   <script src="./asse/js/moretext.js" defer></script>
+   <script type="application/ld+json" defer>
+{
+ "@context": "https://schema.org/",
+ "@type": "Product",
+ "name": "Reviews",
+ "image": "https://webdschool.com/asse/img/logo/logo-2.webp",
+ "description": "Our Digital Marketing course has been designed in a very comprehensive manner & it comprises of every single channel & their components covered.In a nutshell, our Digital marketing institute in chennai teaches everything you need to know about digital marketing.",
+   "mpn": "001",
+ "sku": "9791333350",
+ "brand": {
+   "@type": "Organization",
+   "name": "Web D School"
+ },
+ "offers": {
+   "@type": "Offer",
+   "url": "https://www.webdschool.com/online-course/digital-marketing.html",
+   "priceCurrency": "INR",
+   "price": "34500",
+   "priceValidUntil": "2022-11-10",
+   "availability": "https://schema.org/InStock"
+ },
+ "aggregateRating": {
+   "@type": "AggregateRating",
+   "ratingValue": "4.8",
+   "bestRating": "5",
+   "worstRating": "1",
+   "ratingCount": "441",
+   "reviewCount": "441"
+ },
+ "review": {
+   "@type": "Review",
+   "name": "SRIRANJANI",
+   "reviewBody": "I have completed Digital Marketing Course @ Web D School. Getting trained here was a tremendous experience, and the trainers were too friendly? Students get the right guidance &
+assistance for the career enhancement from the placment cell. Thanks a lot Web D School for providing such great training.",
+   "reviewRating": {
+     "@type": "Rating",
+     "ratingValue": "5",
+     "bestRating": "5",
+     "worstRating": "1"
+   },
+   "datePublished": "2021-07-14",
+   "author": {"@type": "Person", "name": "Web D School"}
+ }
+}
+</script>
+   <script type="application/ld+json" defer>
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [{
+   "@type": "Question",
+   "name": "What is the eligibility to join Online Digital Marketing Course at Web D School ?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": " Well, you need an understanding of how all of the digital marketing concepts work, but there are specialisations you can choose from. For instance, Social media marketing and Search engine marketing are individually their own domains."
+   }
+ },{
+   "@type": "Question",
+   "name": "What makes Web D School the best place to learn Digital marketing course online?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Our Online digital marketing course covers A to Z of the entire Digital Marketing field & we deliver the classes in the most student-friendly manner."
+   }
+ }]
+}
+</script>
+   <!-- <script async src="//www.googletagmanager.com/gtm.js?id=GTM-5GRFZX" defer></script>
+ <script async src="//www.google-analytics.com/analytics.js" defer></script> -->
+   <script src="js/jquery.js" defer></script>
+   <script src="js/custom.min.js" defer></script>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61683072-3" defer></script>
+
+
+   <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-61683072-3');
+   </script>
+   <script>
+      const modal = document.getElementById('myModal');
+      const button = document.getElementById('videoBtn');
+      const closeButton = document.getElementsByClassName('close')[0];
+      const video = document.getElementById('myVideo');
+
+      button.addEventListener('click', function () {
+         modal.style.display = 'block';
+         video.play();
+      });
+
+      closeButton.addEventListener('click', function () {
+         modal.style.display = 'none';
+         video.pause();
+         video.currentTime = 0;
+      });
+
+      window.addEventListener('click', function (event) {
+         if (event.target === modal) {
+            modal.style.display = 'none';
+            video.pause();
+            video.currentTime = 0; // Reset video to start
+         }
+      });
+   </script>
+   <script>
+      window.addEventListener('load', async () => {
+         let video = document.querySelector('video[muted][autoplay]');
+         try {
+            await video.play();
+         } catch (err) {
+            video.controls = true;
+         }
+      });
+   </script>
+</body>
+
+</html>
