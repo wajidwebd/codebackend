@@ -7,10 +7,23 @@ const session = require("express-session");
 const bcrypt = require("bcryptjs");
 const path = require("path");
 const app = express();
-
+const allowedOrigins = [
+  "http://localhost:5173",              // local dev
+  "https://class-codehub.vercel.app"    // production frontend
+];  
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, curl, etc.)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(
   session({
