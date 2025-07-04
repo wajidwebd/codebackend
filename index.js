@@ -76,7 +76,6 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => cb(null, Date.now() + "-" + file.originalname),
 });
 const upload = multer({ storage });
-
 app.post("/upload-lesson", upload.array("filenames"), async (req, res) => {
   try {
     const {
@@ -88,7 +87,7 @@ app.post("/upload-lesson", upload.array("filenames"), async (req, res) => {
       classtype,
     } = req.body;
 
-    // Normalize student names
+    // Step 1: Normalize student names (to lowercase, trimmed)
     let studentsArray = [];
     if (studentsname) {
       if (Array.isArray(studentsname)) {
@@ -98,10 +97,13 @@ app.post("/upload-lesson", upload.array("filenames"), async (req, res) => {
       }
     }
 
-    studentsArray = studentsArray.map(name => name.trim().toLowerCase());
+    // Step 2: Remove duplicates (case-insensitive)
+    const uniqueStudents = Array.from(new Set(
+      studentsArray.map(name => name.trim().toLowerCase())
+    ));
 
-    // Check and insert missing students (avoid duplicate email)
-    for (const name of studentsArray) {
+    // Step 3: Create missing student entries (only for new students)
+    for (const name of uniqueStudents) {
       const exists = await Student.findOne({
         name: name,
         branchname: branchname.toLowerCase().trim(),
@@ -114,17 +116,18 @@ app.post("/upload-lesson", upload.array("filenames"), async (req, res) => {
           email: `${name}-${Date.now()}@example.com`,
           branchname: branchname.toLowerCase().trim(),
           batchname: batchname.trim(),
-          // No email field inserted = avoids duplicate issue
         });
       }
     }
 
+    // Step 4: Get uploaded file names
     const filenames = req.files.map(file => file.filename);
 
+    // Step 5: Save new lesson with unique student names
     const newLesson = new Lesson({
       branchname,
       batchname,
-      studentsname: studentsArray,
+      studentsname: uniqueStudents,  // ✅ no duplicates here
       createddate,
       topicname,
       filenames,
@@ -134,11 +137,75 @@ app.post("/upload-lesson", upload.array("filenames"), async (req, res) => {
     await newLesson.save();
 
     res.status(200).json({ message: "Lesson uploaded and students created" });
+
   } catch (error) {
     console.error("Upload lesson error:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
+// app.post("/upload-lesson", upload.array("filenames"), async (req, res) => {
+//   try {
+//     const {
+//       branchname,
+//       batchname,
+//       createddate,
+//       topicname,
+//       studentsname,
+//       classtype,
+//     } = req.body;
+
+//     // Normalize student names
+//     let studentsArray = [];
+//     if (studentsname) {
+//       if (Array.isArray(studentsname)) {
+//         studentsArray = studentsname;
+//       } else {
+//         studentsArray = [studentsname];
+//       }
+//     }
+
+//     studentsArray = studentsArray.map(name => name.trim().toLowerCase());
+
+//     // Check and insert missing students (avoid duplicate email)
+//     for (const name of studentsArray) {
+//       const exists = await Student.findOne({
+//         name: name,
+//         branchname: branchname.toLowerCase().trim(),
+//         batchname: batchname.trim(),
+//       });
+
+//       if (!exists) {
+//         await Student.create({
+//           name: name,
+//           email: `${name}-${Date.now()}@example.com`,
+//           branchname: branchname.toLowerCase().trim(),
+//           batchname: batchname.trim(),
+//           // No email field inserted = avoids duplicate issue
+//         });
+//       }
+//     }
+
+//     const filenames = req.files.map(file => file.filename);
+
+//     const newLesson = new Lesson({
+//       branchname,
+//       batchname,
+//       studentsname: studentsArray,
+//       createddate,
+//       topicname,
+//       filenames,
+//       classtype,
+//     });
+
+//     await newLesson.save();
+
+//     res.status(200).json({ message: "Lesson uploaded and students created" });
+//   } catch (error) {
+//     console.error("Upload lesson error:", error);
+//     res.status(500).json({ error: "Internal server error" });
+//   }
+// });
 
 // Branch Creation
 app.post("/create-branch", async (req, res) => {
